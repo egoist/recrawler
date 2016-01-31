@@ -8,7 +8,10 @@ test('ok', async t => {
 })
 
 test('404', async t => {
-	await aimer('https://www.npmjs.com/sasdffsad').catch(err => {
-		t.fail(err.message)
-	})
+	try {
+		await aimer('https://www.npmjs.com/sasdffsad')
+		t.fail('should throw 404 but didn\'t')
+	} catch (e) {
+		t.pass(e.message)
+	}
 })
