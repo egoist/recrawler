@@ -4,7 +4,7 @@
 
 ## Motivation
 
-Sometime I want grab some nice images from a url like http://bbs.005.tv/thread-492392-1-1.html, so I made this little program to combine `node-fetch` and `cheerio` to make my attempt fulfilled.
+Sometimes I want grab some nice images from a url like http://bbs.005.tv/thread-492392-1-1.html, so I made this little program to combine `node-fetch` and `cheerio` to make my attempt fulfilled.
 
 ## Install
 
