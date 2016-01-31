@@ -1,4 +1,4 @@
-# aimer [![NPM version](https://img.shields.io/npm/v/aimer.svg)](https://npmjs.com/package/aimer) [![NPM downloads](https://img.shields.io/npm/dm/aimer.svg)](https://npmjs.com/package/aimer) [![Build Status](https://img.shields.io/circleci/project/egoist/aimer/master.svg)](https://circleci.com/gh/egoist/aimer)
+# aimer [![NPM version](https://img.shields.io/npm/v/aimer.svg)](https://npmjs.com/package/aimer) [![NPM downloads](https://img.shields.io/npm/dm/aimer.svg)](https://npmjs.com/package/aimer) [![Circle CI](https://circleci.com/gh/egoist/aimer/tree/master.svg?style=svg)](https://circleci.com/gh/egoist/aimer/tree/master)
 
 > Remote web content crawler done right.
 
