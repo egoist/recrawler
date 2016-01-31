@@ -14,6 +14,11 @@ module.exports = function (url, opts) {
 	opts = opts || {}
 
 	return fetch(url)
-		.then(data => data.text())
+		.then(data => {
+			if (data.status !== 200) {
+				return Promise.reject(new Error(data.statusText))
+			}
+			return data.text()
+		})
 		.then(data => cheerio.load(data, opts))
 }
