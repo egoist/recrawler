@@ -32,7 +32,7 @@ aimer('http://some-url.com/a/b/c')
 
 **opts**
 
-[cheerio](https://github.com/cheeriojs/cheerio) options.
+[cheerio](https://github.com/cheeriojs/cheerio) options. Except `decodeEntities` is `false` by default here.
 
 ## License
 
