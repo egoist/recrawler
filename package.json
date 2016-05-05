@@ -19,7 +19,8 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "crawler",
+    "scraper"
   ],
   "dependencies": {
     "cheerio": "^0.20.0",
@@ -30,6 +31,7 @@
     "xo": "^0.15.0"
   },
   "xo": {
-    "semicolon": false
+    "semicolon": false,
+    "space": 2
   }
 }
