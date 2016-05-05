@@ -1,6 +1,6 @@
 {
   "name": "aimer",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Remote web content crawler done right.",
   "license": "MIT",
   "repository": "egoist/aimer",
