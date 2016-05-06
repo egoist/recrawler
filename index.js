@@ -16,7 +16,7 @@ module.exports = function (url, opts) {
   const ret = fetch(url)
     .then(data => {
       if (data.status !== 200) {
-        return Promise.reject(new Error('Not Found'))
+        return Promise.reject(new Error(data.statusText))
       }
       return data.text()
     })
