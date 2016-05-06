@@ -1,6 +1,6 @@
 {
   "name": "aimer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Remote web content crawler done right.",
   "license": "MIT",
   "repository": "egoist/aimer",
@@ -35,6 +35,8 @@
   "xo": {
     "semicolon": false,
     "space": 2,
-    "globals": ["document"]
+    "globals": [
+      "document"
+    ]
   }
 }
