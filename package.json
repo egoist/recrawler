@@ -16,7 +16,8 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "nightmare.js"
   ],
   "keywords": [
     "crawler",
@@ -24,6 +25,7 @@
   ],
   "dependencies": {
     "cheerio": "^0.20.0",
+    "nightmare": "^2.4.0",
     "node-fetch": "^1.5.1"
   },
   "devDependencies": {
@@ -32,6 +34,7 @@
   },
   "xo": {
     "semicolon": false,
-    "space": 2
+    "space": 2,
+    "globals": ["document"]
   }
 }

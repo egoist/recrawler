@@ -1,5 +1,6 @@
 import test from 'ava'
 import aimer from './'
+import nightmare from './nightmare'
 
 test('ok', async t => {
   const $ = await aimer('https://www.npmjs.com/')
@@ -12,6 +13,20 @@ test('404', async t => {
     await aimer('https://www.npmjs.com/sasdffsad')
     t.fail('should throw 404 but didn\'t')
   } catch (e) {
-    t.pass(e.message)
+    t.is(e.message, 'Not Found')
   }
+})
+
+test('nightmare 404', async t => {
+  try {
+    await nightmare('https://www.npmjs.com/sasdffsad')
+    t.fail('should throw 404 but didn\'t')
+  } catch (e) {
+    t.is(e.message, 'Not Found')
+  }
+})
+
+test('nightmare manipulation', async t => {
+  const $ = await nightmare('https://gold.xitu.io')
+  t.is(typeof $('.entry-info').text(), 'string')
 })

@@ -1,27 +1,27 @@
 'use strict'
-
-/**
- * Module dependencies
- */
-const fetch = require('node-fetch')
 const cheerio = require('cheerio')
+const fetch = require('node-fetch')
 
 module.exports = function (url, opts) {
   if (typeof url !== 'string') {
     throw new TypeError('Expected a string')
   }
 
-  opts = Object.assign({
+  opts = opts || {}
+  const cheerioOpts = Object.assign({
     // keep the original unicode chars
     decodeEntities: false
-  }, opts)
-
-  return fetch(url)
+  }, opts.cheerio)
+  // normal mode, faster
+  const ret = fetch(url)
     .then(data => {
       if (data.status !== 200) {
-        return Promise.reject(new Error(data.statusText))
+        return Promise.reject(new Error('Not Found'))
       }
       return data.text()
     })
-    .then(data => cheerio.load(data, opts))
+  if (opts.htmlOnly) {
+    return ret
+  }
+  return ret.then(data => cheerio.load(data, cheerioOpts))
 }
