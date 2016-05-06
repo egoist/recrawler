@@ -4,7 +4,7 @@
 
 ## Motivation
 
-Sometimes I want grab some nice images from a url like http://bbs.005.tv/thread-492392-1-1.html, so I made this little program to combine `node-fetch` and `cheerio` to make my attempt fulfilled. And it uses `nightmare` to handle SPAs.
+Sometimes I want to grab some nice images from a url like http://bbs.005.tv/thread-492392-1-1.html, so I made this little program to combine `node-fetch` and `cheerio` to make my attempt fulfilled. And it uses `nightmare` to handle SPAs.
 
 ## Install
 
@@ -45,7 +45,7 @@ nightmare('http://some-url.com/#!/list')
 
 ### nightmare(url, opts)
 
-Use [nightmare](https://github.com/segmentio/nightmare) to retrive html from url, this is good for handling with SPA website.
+Use [nightmare](https://github.com/segmentio/nightmare) to retrieve html from url, this is good for handling SPA website.
 
 #### opts
 
