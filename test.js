@@ -1,6 +1,6 @@
 import test from 'ava'
-import aimer from './'
 import nightmare from './nightmare'
+import aimer from './'
 
 test('ok', async t => {
   const $ = await aimer('https://www.npmjs.com/')
