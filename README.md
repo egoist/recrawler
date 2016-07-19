@@ -38,13 +38,6 @@ aimer('http://some-url.com/a/b/c')
 
 [cheerio](https://github.com/cheeriojs/cheerio) options. Except `decodeEntities` is `false` by default here.
 
-#### opts
-
-##### cheerio
-
-[cheerio](https://github.com/cheeriojs/cheerio) options. Except `decodeEntities` is `false` by default here.
-
-
 ## License
 
 MIT © [EGOIST](https://github.com/egoist)
