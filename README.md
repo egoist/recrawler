@@ -4,13 +4,15 @@
 
 ## Motivation
 
-Sometimes I want to grab some nice images from a url like http://bbs.005.tv/thread-492392-1-1.html, so I made this little program to combine `node-fetch` and `cheerio` to make my attempt fulfilled. And it uses `nightmare` to handle SPAs.
+Sometimes I want to grab some nice images from a url like http://bbs.005.tv/thread-492392-1-1.html, so I made this little program to combine `node-fetch` and `cheerio` to make my attempt fulfilled. 
 
 ## Install
 
-```
+```bash
 $ npm install --save aimer
 ```
+
+For Single Page Apps please head to [aimer-nightmare](https://github.com/egoist/aimer-nightmare)
 
 ## Usage
 
@@ -24,13 +26,6 @@ aimer('http://some-url.com/a/b/c')
 			console.log(url)
 		})
 	})
-
-// or even single page website!
-const nightmare = require('aimer/nightmare')
-nightmare('http://some-url.com/#!/list')
-  .then($ => {
-    // your code goes here
-  })
 ```
 
 ## API
@@ -43,19 +38,12 @@ nightmare('http://some-url.com/#!/list')
 
 [cheerio](https://github.com/cheeriojs/cheerio) options. Except `decodeEntities` is `false` by default here.
 
-### nightmare(url, opts)
-
-Use [nightmare](https://github.com/segmentio/nightmare) to retrieve html from url, this is good for handling SPA website.
-
 #### opts
 
 ##### cheerio
 
 [cheerio](https://github.com/cheeriojs/cheerio) options. Except `decodeEntities` is `false` by default here.
 
-##### nightmare
-
-[nightmare](https://github.com/segmentio/nightmare) options.
 
 ## License
 

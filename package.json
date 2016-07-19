@@ -16,8 +16,7 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "nightmare.js"
+    "index.js"
   ],
   "keywords": [
     "crawler",
@@ -25,7 +24,6 @@
   ],
   "dependencies": {
     "cheerio": "^0.20.0",
-    "nightmare": "^2.4.0",
     "node-fetch": "^1.5.1"
   },
   "devDependencies": {
