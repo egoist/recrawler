@@ -38,6 +38,14 @@ aimer('http://some-url.com/a/b/c')
 
 [cheerio](https://github.com/cheeriojs/cheerio) options. Except `decodeEntities` is `false` by default here.
 
+##### got
+
+[got](https://github.com/sindresorhus/got) options, this module is used for retriving web contents.
+
+#### proxy
+
+An http or https proxy address, eg: `http://localhost:8787` for Lantern. If `process.env.http_proxy` is set and `opts.proxy` is not set we use the former. Set `opts.proxy` to `false` to disable proxy anyway.
+
 ## License
 
 MIT © [EGOIST](https://github.com/egoist)

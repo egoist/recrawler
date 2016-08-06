@@ -24,10 +24,12 @@
   ],
   "dependencies": {
     "cheerio": "^0.20.0",
-    "node-fetch": "^1.5.1"
+    "got": "^6.3.0",
+    "https-proxy-agent": "^1.0.0"
   },
   "devDependencies": {
     "ava": "^0.14.0",
+    "is-ci": "^1.0.9",
     "xo": "^0.15.0"
   },
   "xo": {

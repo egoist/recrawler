@@ -1,6 +1,7 @@
 'use strict'
 const cheerio = require('cheerio')
-const fetch = require('node-fetch')
+const got = require('got')
+const HttpsProxyAgent = require('https-proxy-agent')
 
 module.exports = function (url, opts) {
   if (typeof url !== 'string') {
@@ -8,18 +9,25 @@ module.exports = function (url, opts) {
   }
 
   opts = opts || {}
+  const proxy = opts.proxy === undefined ?
+    process.env.http_proxy :
+    opts.proxy
+
   const cheerioOpts = Object.assign({
     // keep the original unicode chars
     decodeEntities: false
   }, opts.cheerio)
-  // normal mode, faster
-  const ret = fetch(url)
-    .then(data => {
-      if (data.status !== 200) {
-        return Promise.reject(new Error(data.statusText))
-      }
-      return data.text()
-    })
+
+  const gotOptions = Object.assign({
+    agent: proxy && (new HttpsProxyAgent(proxy))
+  }, opts.got)
+
+  const ret = got.get(url, gotOptions).then(data => {
+    if (data.statusCode !== 200) {
+      return Promise.reject(new Error(data.statusText))
+    }
+    return data.body
+  })
   if (opts.htmlOnly) {
     return ret
   }
