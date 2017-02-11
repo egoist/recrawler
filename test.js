@@ -1,15 +1,15 @@
 import test from 'ava'
-import aimer from './'
+import fetch from './'
 
 test('ok', async t => {
-  const $ = await aimer('https://www.npmjs.com/package/hack')
+  const $ = await fetch('https://www.npmjs.com/package/hack')
   const src = $('.package-name').text().trim()
   t.is(src, 'hack')
 })
 
 test('404', async t => {
   try {
-    await aimer('https://www.npmjs.com/sasdffsad')
+    await fetch('https://www.npmjs.com/sasdffsad')
     t.fail('should throw 404 but didn\'t')
   } catch (e) {
     t.is(e.message, 'Not Found')
