@@ -1,4 +1,4 @@
-# aimer [![NPM version](https://img.shields.io/npm/v/aimer.svg)](https://npmjs.com/package/aimer) [![NPM downloads](https://img.shields.io/npm/dm/aimer.svg)](https://npmjs.com/package/aimer) [![Circle CI](https://circleci.com/gh/egoist/aimer/tree/master.svg?style=svg)](https://circleci.com/gh/egoist/aimer/tree/master)
+# recrawler [![NPM version](https://img.shields.io/npm/v/recrawler.svg)](https://npmjs.com/package/recrawler) [![NPM downloads](https://img.shields.io/npm/dm/recrawler.svg)](https://npmjs.com/package/recrawler) [![Circle CI](https://circleci.com/gh/egoist/recrawler/tree/master.svg?style=svg)](https://circleci.com/gh/egoist/recrawler/tree/master)
 
 > Remote web content crawler done right.
 
@@ -9,17 +9,17 @@ Sometimes I want to grab some nice images from a url like http://bbs.005.tv/thre
 ## Install
 
 ```bash
-$ npm install --save aimer
+$ npm install --save recrawler
 ```
 
-For Single Page Apps please head to [aimer-nightmare](https://github.com/egoist/aimer-nightmare)
+For Single Page Apps please head to [recrawler-nightmare](https://github.com/egoist/recrawler-nightmare)
 
 ## Usage
 
 ```js
-const aimer = require('aimer')
+const recrawler = require('recrawler')
 
-aimer('http://some-url.com/a/b/c')
+recrawler('http://some-url.com/a/b/c')
 	.then($ => {
 		$('img.nice-images').each(function () {
 			const url = $(this).attr('src')
@@ -30,7 +30,7 @@ aimer('http://some-url.com/a/b/c')
 
 ## API
 
-### aimer(url, opts)
+### recrawler(url, opts)
 
 #### opts
 
