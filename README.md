@@ -12,7 +12,7 @@ Sometimes I want to grab some nice images from a url like http://bbs.005.tv/thre
 $ npm install --save recrawler
 ```
 
-For Single Page Apps please head to [recrawler-nightmare](https://github.com/egoist/recrawler-nightmare)
+For Single Page Apps please head to [recrawler-spa](https://github.com/egoist/recrawler-spa)
 
 ## Usage
 
